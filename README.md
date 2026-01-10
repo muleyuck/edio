@@ -5,6 +5,8 @@
 
 A command-line tool that opens stdin in your editor, lets you edit the content interactively, and outputs the result to stdout.
 
+![demo](https://github.com/user-attachments/assets/ed4a030d-1734-44fd-b745-8a1108c501c3)
+
 ## Installation
 
 ### From source
