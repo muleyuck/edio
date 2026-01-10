@@ -1,7 +1,12 @@
 [package]
 name = "edio"
 version = "0.1.0"
+authors = ["muleyuck <takuty.008.awenite.1121@gmail.com>"]
 edition = "2021"
+description = "JSON navigator and interactive filter leveraging jq"
+repository = "https://github.com/muleyuck/edio"
+license = "MIT"
+readme = "README.md"
 
 [dependencies]
 anyhow = "1.0.100"
@@ -10,3 +15,8 @@ tempfile = "3.24.0"
 
 [dev-dependencies]
 serial_test = "3.2.0"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
