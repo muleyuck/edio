@@ -1,3 +1,6 @@
+[![unit-test](https://github.com/muleyuck/edio/actions/workflows/unit-test.yml/badge.svg)](https://github.com/muleyuck/edio/actions/workflows/unit-test.yml)
+![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
+
 # 📻 edio
 
 A command-line tool that opens stdin in your editor, lets you edit the content interactively, and outputs the result to stdout.
