@@ -1,6 +1,8 @@
+mod editor;
+
 use anyhow::anyhow;
 use clap::Parser;
-use std::env;
+use editor::{get_editor, ActualGitConfig};
 use std::fs;
 use std::io::IsTerminal;
 use std::io::Read;
@@ -9,34 +11,6 @@ use std::process::{exit, Command, Stdio};
 use tempfile::Builder;
 
 const APP_NAME: &str = env!("CARGO_PKG_NAME");
-
-/// Gets the editor using the same logic as Git.
-/// Checks GIT_EDITOR, VISUAL, EDITOR environment variables in order,
-/// then falls back to git's core.editor config, and finally defaults to vi.
-fn get_editor() -> String {
-    if let Ok(editor) = env::var("GIT_EDITOR") {
-        return editor;
-    }
-    if let Ok(editor) = env::var("VISUAL") {
-        return editor;
-    }
-    if let Ok(editor) = env::var("EDITOR") {
-        return editor;
-    }
-
-    let mut cmd = Command::new("git");
-    cmd.args(["config", "--get", "core.editor"]);
-    if let Ok(out) = cmd.output() {
-        if out.status.success() {
-            let s = String::from_utf8_lossy(&out.stdout).trim().to_string();
-            if !s.is_empty() {
-                return s;
-            }
-        }
-    }
-
-    String::from("vi")
-}
 
 /// Launches an editor with optional initial content and returns the edited content
 fn launch_editor(args: Args, input: &str) -> anyhow::Result<String> {
@@ -61,7 +35,7 @@ fn launch_editor(args: Args, input: &str) -> anyhow::Result<String> {
         temp_file.flush()?;
     }
 
-    let editor = get_editor();
+    let editor = get_editor(&ActualGitConfig);
 
     let abs_path = fs::canonicalize(&tmppath).unwrap_or_else(|_| tmppath.clone());
 
