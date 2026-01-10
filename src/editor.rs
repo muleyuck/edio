@@ -20,7 +20,7 @@ impl GitConfigEditor for ActualGitConfig {
         if s.is_empty() {
             return None;
         }
-        return Some(s);
+        Some(s)
     }
 }
 
