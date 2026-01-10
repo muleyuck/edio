@@ -9,10 +9,14 @@ A command-line tool that opens stdin in your editor, lets you edit the content i
 
 ## Installation
 
-### From source
-
+### Shell script
 ```bash
-cargo install --path .
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/muleyuck/edio/releases/latest/download/edio-installer.sh
+```
+
+### Homebrew
+```bash
+brew install muleyuck/tap/edio
 ```
 
 ## Usage
