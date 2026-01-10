@@ -76,7 +76,7 @@ fn launch_editor(args: Args, input: &str) -> anyhow::Result<String> {
 }
 
 #[derive(Parser, Debug)]
-#[command(name = "editin", version)]
+#[command(name = APP_NAME, version)]
 struct Args {
     #[arg(
         short = 'e',
