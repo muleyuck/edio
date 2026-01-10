@@ -1,5 +1,6 @@
 [![unit-test](https://github.com/muleyuck/edio/actions/workflows/unit-test.yml/badge.svg)](https://github.com/muleyuck/edio/actions/workflows/unit-test.yml)
 ![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
+[![Release](https://img.shields.io/github/release/muleyuck/edio.svg)](https://github.com/muleyuck/edio/releases/latest)
 
 # 📻 edio
 
