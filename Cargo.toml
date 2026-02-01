@@ -1,6 +1,6 @@
 [package]
 name = "edio"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["muleyuck <takuty.008.awenite.1121@gmail.com>"]
 edition = "2021"
 description = "A command-line tool that opens stdin in your editor and outputs the result to stdout"
