@@ -10,7 +10,7 @@ readme = "README.md"
 
 [dependencies]
 anyhow = "1.0.100"
-clap = { version = "4.5.53", features = ["derive"] }
+clap = { version = "4.5.59", features = ["derive"] }
 tempfile = "3.24.0"
 
 [dev-dependencies]
