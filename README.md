@@ -20,6 +20,12 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/muleyuck/edio/releases/
 brew install muleyuck/tap/edio
 ```
 
+### Cargo
+
+```bash
+cargo install --git https://github.com/muleyuck/edio
+```
+
 ## Usage
 
 ```bash
