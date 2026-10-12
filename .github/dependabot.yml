@@ -8,8 +8,6 @@ updates:
       dependencies:
         patterns:
           - "*"
-    exclude-paths:
-      - ".github/workflows/release.yml"
     schedule:
       interval: weekly
       day: saturday
