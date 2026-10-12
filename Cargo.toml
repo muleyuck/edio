@@ -16,7 +16,7 @@ tempfile = "3.27.0"
 [dev-dependencies]
 serial_test = "3.5.0"
 
-# The profile that 'dist' will build with
+# The profile release builds use (.github/workflows/build-release.yml)
 [profile.dist]
 inherits = "release"
 lto = "thin"

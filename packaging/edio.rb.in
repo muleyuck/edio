@@ -1,0 +1,36 @@
+class Edio < Formula
+  desc "Edit stdin in your editor and print the result to stdout"
+  homepage "https://github.com/muleyuck/edio"
+  version "@VERSION@"
+  license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/muleyuck/edio/releases/download/v#{version}/edio-aarch64-apple-darwin.tar.xz"
+      sha256 "@SHA256_AARCH64_APPLE_DARWIN@"
+    end
+    on_intel do
+      url "https://github.com/muleyuck/edio/releases/download/v#{version}/edio-x86_64-apple-darwin.tar.xz"
+      sha256 "@SHA256_X86_64_APPLE_DARWIN@"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/muleyuck/edio/releases/download/v#{version}/edio-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "@SHA256_AARCH64_UNKNOWN_LINUX_GNU@"
+    end
+    on_intel do
+      url "https://github.com/muleyuck/edio/releases/download/v#{version}/edio-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "@SHA256_X86_64_UNKNOWN_LINUX_GNU@"
+    end
+  end
+
+  def install
+    bin.install "edio"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/edio --version")
+  end
+end
