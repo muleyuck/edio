@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.0](https://github.com/muleyuck/edio/compare/v0.2.1...v0.3.0) (2026-10-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* the shell installer (edio-installer.sh) is no longer published; v0.2.1 was its last release. Install with Homebrew, cargo install, or the release archives.
+
+### build
+
+* stop publishing the shell installer and release without cargo-dist ([#28](https://github.com/muleyuck/edio/issues/28)) ([dcd1dd4](https://github.com/muleyuck/edio/commit/dcd1dd4d8335fd1a61c2eab7d3d304f853bc361c))
+
 ## [0.2.1](https://github.com/muleyuck/edio/compare/v0.2.0...v0.2.1) (2026-02-01)
 
 
